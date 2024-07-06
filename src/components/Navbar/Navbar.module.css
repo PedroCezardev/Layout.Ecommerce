@@ -1,0 +1,82 @@
+/* Navbar.module.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .navbar{
+    @apply bg-white
+    dark:bg-gray-900 
+    dark:text-white
+      duration-200
+      relative z-40;
+  }
+
+  .navbarContainer{
+    @apply container 
+    flex 
+    justify-between 
+    items-center;
+  }
+
+  .navbarLogoLinkSection{
+    @apply flex 
+    items-center 
+    gap-4;
+  }
+
+  .navbarLogo {
+    @apply text-primary 
+    font-semibold 
+    tracking-widest 
+    text-2xl uppercase 
+    sm:text-3xl;
+  }
+
+  /* Analisar esta estilização depois.
+  .navbarMenuItems{
+    @apply hidden lg:block
+  } */
+
+  .navbarListItems{
+    @apply flex 
+    items-center 
+    gap-4;
+  }
+
+  .navbarRightSection{
+    @apply flex 
+    justify-between 
+    items-center 
+    gap-4;
+  }
+
+  /*.searchBarSection{
+    @apply relative group hidden sm:block
+  }*/
+
+  .navbarSearchIcon{
+    @apply text-xl 
+    text-gray-600
+    group-hover:text-primary
+    dark:text-gray-400
+    absolute
+    top-1/2
+    -translate-y-1/2
+    right-3
+    duration-200;
+  }
+
+  .orderbuttonSection{
+    @apply relative
+    p-3;
+  }
+
+  .buttonSectionIcon{
+    @apply text-xl
+    text-gray-600
+    dark:text-gray-400;
+  }
+
+  
+}
