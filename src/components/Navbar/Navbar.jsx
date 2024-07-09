@@ -45,19 +45,19 @@ const DropdownLinks = [
   }
 ]
 
-const Navbar = () => {
+const Navbar = ({ handleOrderPopup }) => {
   return (
-    <div className="bg-white
-    dark:bg-gray-900 
-    dark:text-white
-      duration-250
-      relative z-40">
+    <div className="bg-white dark:bg-gray-900 dark:text-white 
+      duration-250 relative z-40">
         <div className='py-4'>
-            <div className={style.navbarContainer}>
-              <div className={style.navbarLogoLinkSection}>
-                <a href="#" className={style.navbarLogo}>ESHOP</a>
-                <div className={style.navbarMenuItems}>
-                  <ul className={style.navbarListItems}>
+            <div className="container flex justify-between items-center;">
+              <div className="flex items-center gap-4;">
+                <a href="#" className="text-primary font-semibold 
+                  tracking-widest text-2xl uppercase sm:text-3xl">
+                    ESHOP
+                </a>
+                <div className="hidden lg:block">
+                  <ul className="flex items-center gap-4;">
                     {
                       MenuLinks.map((data, index) => (
                         <li key={index}>
@@ -103,22 +103,28 @@ const Navbar = () => {
                   </ul>
                 </div>
               </div>
-              <div className={style.navbarRightSection}>
+              <div className="flex justify-between items-center gap-4">
                 <div className="relative group hidden sm:block">
                   <input 
                     type="text" 
                     placeholder='Pesquisar' 
                     className="search-bar"
-                    />
-                    <IoMdSearch className={style.navbarSearchIcon} /> 
+                  />
+                  <IoMdSearch className="text-xl text-gray-600 group-hover:text-primary
+                  dark:text-gray-400 absolute top-1/2 -translate-y-1/2
+                    right-3 duration-200;" 
+                  /> 
                 </div>
-                <button className={style.orderbuttonSection}>
-                  <FaCartShopping className={style.buttonSectionIcon} />
+                <button className="relative p-3" 
+                  onClick={handleOrderPopup}>
+                  <FaCartShopping className="text-xl text-gray-600
+                    dark:text-gray-400" 
+                  />
                   <div className="w-4 h-4 bg-red-500 text-white
                       rounded-full absolute top-0 right-0 flex 
                       items-center justify-center text-xs;">4</div>
                 </button>
-
+                {/* Dark Mode section */}
                 <div>
                   <DarkMode />
                 </div>

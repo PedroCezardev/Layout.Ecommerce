@@ -9,18 +9,21 @@ const BlogData = [
         subtitle: "Um Bugatti Chiron, um dos veículos mais caros e desejados do mundo, foi visto rodando em São Paulo no último final de semana. A unidade foi importada pela Paíto Motors, uma importadora independente de veículos de luxo.",
         published: "Jan 20, 2024 by Dilshad",
         image: Img1,
+        aosDelay: "0",
     },
     {
         title: "How to choose perfect smartwatch",
         subtitle: "Um Bugatti Chiron, um dos veículos mais caros e desejados do mundo, foi visto rodando em São Paulo no último final de semana. A unidade foi importada pela Paíto Motors, uma importadora independente de veículos de luxo.",
         published: "Jan 20, 2024 by Dilshad",
         image: Img2,
+        aosDelay: "200",
     },
     {
         title: "How to choose perfect smartwatch",
         subtitle: "Um Bugatti Chiron, um dos veículos mais caros e desejados do mundo, foi visto rodando em São Paulo no último final de semana. A unidade foi importada pela Paíto Motors, uma importadora independente de veículos de luxo.",
         published: "Jan 20, 2024 by Dilshad",
         image: Img3,
+        aosDelay: "400",
     },
 ];
 
@@ -39,7 +42,9 @@ const Blogs = () => {
                 {/* Blog card */}
                 {
                     BlogData.map((data) => (
-                        <div key={data.id} className="bg-white dark:bg-gray-900" >
+                        <div data-aos="fade-up"
+                            data-aos-delay={data.aosDelay}
+                            key={data.id} className="bg-white dark:bg-gray-900" >
                             {/* image section */}
                             <div className="overflow-hidden rounded-2xl mb-2" >
                                 <img src={data.image} alt=""
