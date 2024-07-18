@@ -2,9 +2,11 @@ import Heading from "../Shared/Heading";
 import Img1 from "../../assets/blogs/blog-1.jpg";
 import Img2 from "../../assets/blogs/blog-2.jpg";
 import Img3 from "../../assets/blogs/blog-3.jpg";
+import PropTypes from 'prop-types';
 
 const BlogData = [
     {
+        id: 1,
         title: "How to choose perfect smartwatch",
         subtitle: "Um Bugatti Chiron, um dos veículos mais caros e desejados do mundo, foi visto rodando em São Paulo no último final de semana. A unidade foi importada pela Paíto Motors, uma importadora independente de veículos de luxo.",
         published: "Jan 20, 2024 by Dilshad",
@@ -12,6 +14,7 @@ const BlogData = [
         aosDelay: "0",
     },
     {
+        id: 2,
         title: "How to choose perfect smartwatch",
         subtitle: "Um Bugatti Chiron, um dos veículos mais caros e desejados do mundo, foi visto rodando em São Paulo no último final de semana. A unidade foi importada pela Paíto Motors, uma importadora independente de veículos de luxo.",
         published: "Jan 20, 2024 by Dilshad",
@@ -19,6 +22,7 @@ const BlogData = [
         aosDelay: "200",
     },
     {
+        id: 3,
         title: "How to choose perfect smartwatch",
         subtitle: "Um Bugatti Chiron, um dos veículos mais caros e desejados do mundo, foi visto rodando em São Paulo no último final de semana. A unidade foi importada pela Paíto Motors, uma importadora independente de veículos de luxo.",
         published: "Jan 20, 2024 by Dilshad",
@@ -63,12 +67,23 @@ const Blogs = () => {
                         </div>
                     ))
                 }
-        
-
             </div>
         </div>
     </div>
-  )
-}
+  );
+};
 
-export default Blogs
+Blogs.propTypes = {
+    data: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+        title: PropTypes.string.isRequired,
+        subtitle: PropTypes.string.isRequired,
+        published: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        aosDelay: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+};
+
+export default Blogs;

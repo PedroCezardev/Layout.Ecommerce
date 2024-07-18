@@ -1,6 +1,12 @@
 import Button from '../Shared/Button';
+import PropTypes from 'prop-types';
 
 const ProductCard = ({ data }) => {
+
+    const handleClick = () => {
+        // Implementar a lógica de clique aqui
+      };
+
   return (
     <div className="mb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4
@@ -24,7 +30,9 @@ const ProductCard = ({ data }) => {
                                 <Button 
                                     text={"Add ao Carrinho"}
                                     bgColor={"bg-primary"}
-                                    textColor={"text-white"} />
+                                    textColor={"text-white"}
+                                    handler={handleClick}
+                                 />
                             </div>
                         </div>
                         <div className="leading-7">
@@ -35,7 +43,19 @@ const ProductCard = ({ data }) => {
                 ))}
         </div>
     </div>
-  )
-}
+  );
+};
+
+ProductCard.propTypes = {
+    data: PropTypes.arrayOf(
+      PropTypes.shape({
+        aosDelay: PropTypes.string.isRequired,
+        id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+        img: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        price: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+  };
 
 export default ProductCard;

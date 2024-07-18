@@ -1,50 +1,55 @@
 import { IoCloseOutline } from "react-icons/io5"
 import Button from "../Shared/Button"
+import PropTypes from 'prop-types';
 
 const Popup = ({orderPopup, handleOrderPopup}) => {
   return (
     <>
-    {orderPopup && (
-        <div>
-            <div className="h-screen w-screen fixed top-0 left-0 
-                bg-black/50 z-50 backdrop-blur-sm">
-                <div className="w-[300px] fixed top-1/2 left-1/2 -translate-x-1/2
-                    -translate-y-1/2 p-4 shadow-md bg-white dark:bg-gray-900
-                    dark:text-white duration-200 rounded-xl">
-                    {/* Header section */}
-                    <div className="flex items-center justify-between">
-                        <h1>Peça Agora</h1>
-                        <div>
-                            <IoCloseOutline 
-                                onClick={handleOrderPopup}
-                                className="text-2xl cursor-pointer"
-                            />
+        {orderPopup && (
+            <div>
+                <div className="h-screen w-screen fixed top-0 left-0 
+                    bg-black/50 z-50 backdrop-blur-sm">
+                    <div className="w-[300px] fixed top-1/2 left-1/2 -translate-x-1/2
+                        -translate-y-1/2 p-4 shadow-md bg-white dark:bg-gray-900
+                        dark:text-white duration-200 rounded-xl">
+                        {/* Header section */}
+                        <div className="flex items-center justify-between">
+                            <h1>Peça Agora</h1>
+                            <div>
+                                <IoCloseOutline 
+                                    onClick={handleOrderPopup}
+                                    className="text-2xl cursor-pointer"
+                                />
+                            </div>
                         </div>
-                    </div>
-                    {/* Form section */}
-                    <div className="mt-4">
-                        <input type="text" placeholder="Nome"
-                        className="form-input" />
-                        <input type="text" placeholder="Email"
-                        className="form-input" />
-                        <input type="text" placeholder="Endereço"
-                        className="form-input" />
-                        <div className="flex justify-center">
-                            <Button 
-                                text="Peça Agora" 
-                                bgColor={"bg-primary"}
-                                textColor={"text-white"}
-                                handler={handleOrderPopup} 
-                            />
+                        {/* Form section */}
+                        <div className="mt-4">
+                            <input type="text" placeholder="Nome"
+                            className="form-input" />
+                            <input type="text" placeholder="Email"
+                            className="form-input" />
+                            <input type="text" placeholder="Endereço"
+                            className="form-input" />
+                            <div className="flex justify-center">
+                                <Button 
+                                    text="Peça Agora" 
+                                    bgColor={"bg-primary"}
+                                    textColor={"text-white"}
+                                    handler={handleOrderPopup} 
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    )};
-    
+        )}
     </>
-  )
-}
+  );
+};
 
-export default Popup
+Popup.propTypes = {
+    handleOrderPopup: PropTypes.func.isRequired,
+    orderPopup: PropTypes.bool.isRequired,
+};
+
+export default Popup;

@@ -4,6 +4,11 @@ import Image3 from "../../assets/category/macbook.png";
 import Button from "../Shared/Button";
 
 const Category = () => {
+
+  const handleClick = () => {
+    // Implementar a lógica de clique aqui
+  };
+
   return (
     <div className="py-8">
       <div className="container">
@@ -23,6 +28,7 @@ const Category = () => {
                   text="Navegar"
                   bgColor={"bg-primary"}
                   textColor={"text-white"}
+                  handler={handleClick}
                 />
               </div>
             </div>
@@ -42,6 +48,7 @@ const Category = () => {
                   text="Navegar"
                   bgColor={"bg-white"}
                   textColor={"text-brandYellow"}
+                  handler={handleClick}
                 />
               </div>
             </div>
@@ -62,6 +69,7 @@ const Category = () => {
                   text="Navegar"
                   bgColor={"bg-white"}
                   textColor={"text-primary"}
+                  handler={handleClick}
                 />
               </div>
             </div>
@@ -71,7 +79,7 @@ const Category = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Category;

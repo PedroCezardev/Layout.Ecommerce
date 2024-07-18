@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 
 const Heading = ({ title, subtitle }) => {
   return (
@@ -6,7 +6,12 @@ const Heading = ({ title, subtitle }) => {
         <h1 className="text-3xl font-bold lg:text-4xl">{title}</h1>
         <p className="text-xs text-gray-400">{subtitle}</p>
     </div>
-  )
-}
+  );
+};
+
+Heading.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+};
 
 export default Heading;

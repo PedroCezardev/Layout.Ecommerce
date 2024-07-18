@@ -78,9 +78,8 @@ const Products = () => {
             {/* Body section */}
             <ProductCard data={ProductsData} />
         </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default Products
+export default Products;

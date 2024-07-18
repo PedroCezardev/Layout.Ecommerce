@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Banner = ({ data }) => {
   return (
     <div className="min-h-[550px] flex justify-center items-center py-12">
@@ -52,7 +54,20 @@ const Banner = ({ data }) => {
             </div>
         </div>
     </div>
-  )
-}
+  );
+};
+
+Banner.propTypes = {
+    data: PropTypes.shape({
+      bgColor: PropTypes.string.isRequired,
+      discount: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+      title2: PropTypes.string.isRequired,
+      title3: PropTypes.string.isRequired,
+      title4: PropTypes.string.isRequired,
+    }).isRequired,
+};
 
 export default Banner;

@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 
 const Button = ({ text, bgColor, textColor, handler = () => {} }) => {
 
@@ -11,6 +11,13 @@ const Button = ({ text, bgColor, textColor, handler = () => {} }) => {
         {text}
     </button>
   );
+};
+
+Button.propTypes = {
+  text: PropTypes.string.isRequired,
+  bgColor: PropTypes.string.isRequired,
+  textColor: PropTypes.string.isRequired,
+  handler: PropTypes.func.isRequired,
 };
 
 export default Button;
