@@ -1,8 +1,28 @@
-# React + Vite
+# Template de Layout para Ecommerce 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1> Template para Ecommerce </h1>
 
-Currently, two official plugins are available:
+```js
+A página foi desenvolvida com intuito de treinar o conhecimneto 
+com estilização com Tailwind css e como examplo de template de Ecommerce.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ * A página possui:
+   - animações nos elementos em toda página;
+   - Design Moderno interativo e intuitivo;
+   - Template Responsivo para todos tamanhos de Relas;
+```
+
+# Link 
+Acesse o Link do meu Projeto:
+
+Link do meu site 💻: https://layout-ecommerce-rosy.vercel.app/
+
+# Screenshot
+Veja a captura de tela do projeto:
+
+![screenshot](src/assets/prints/print1.png)
+![screenshot](src/assets/prints/print2.png)
+![screenshot](src/assets/prints/print3.png)
+![screenshot](src/assets/prints/print4.png)
+![screenshot](src/assets/prints/print5.png)
+![screenshot](src/assets/prints/print6.png)
